@@ -5,7 +5,7 @@ const Portfolio = () => {
   return (
     <div>
       <h2>Porfolio</h2>
-      <div className="space-y-4 my-4">
+      <div className="space-y-2 my-4">
         {portfolios.map((portfolio, index) => (
           <PortfolioItem data={portfolio} key={index} />
         ))}

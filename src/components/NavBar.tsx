@@ -19,8 +19,13 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { DiMysql } from "react-icons/di";
+import { useEffect, useRef } from "react";
 
 const NavBar = () => {
+  const refA1 = useRef<HTMLSpanElement>(null);
+  const refA2 = useRef<HTMLSpanElement>(null);
+  const logo = useRef<HTMLDivElement>(null);
+
   const skillsTechMaps: {
     [key: string]: { html: React.ReactNode };
   } = {
@@ -111,9 +116,35 @@ const NavBar = () => {
     },
   };
 
+  useEffect(() => {
+    let i = setInterval(() => {
+      refA1.current?.classList.toggle("animate-wink");
+      refA2.current?.classList.toggle("animate-wink");
+    }, 5000);
+
+    let j = setInterval(() => {
+      logo.current?.classList.toggle("animate-radiating");
+    }, 15000);
+
+    return () => {
+      clearInterval(i);
+      clearInterval(j);
+    };
+  }, []);
+
   return (
     <div className="h-screen w-100 flex flex-col justify-center items-center static top-0 left-0 mx-auto lg:fixed">
-      <div className="text-3xl font-extrabold">radia_ated</div>
+      <div className="text-3xl font-extrabold flex" ref={logo}>
+        radi
+        <span className="block" ref={refA1}>
+          a
+        </span>
+        _
+        <span className="block" ref={refA2}>
+          a
+        </span>
+        ted
+      </div>
       <div className="font-extralight mb-2">Software Engineer</div>
       <div className="flex gap-2 text-lg mb-4">
         <Link

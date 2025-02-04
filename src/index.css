@@ -2,6 +2,40 @@
 
 @theme {
   --font-primary: "JetBrains Mono", "serif";
+  --animate-wink: wink 1.5s ease-in-out;
+  --animate-radiating: radiating 1.5s ease-out 3;
+
+  @keyframes wink {
+    0%,
+    100% {
+      transform: scaleY(1);
+    }
+    70% {
+      transform: scaleY(1);
+    }
+    75% {
+      transform: scaleY(0);
+    }
+    80% {
+      transform: scaleY(1);
+    }
+    90% {
+      transform: scaleY(1);
+    }
+    95% {
+      transform: scaleY(0);
+    }
+  }
+
+  @keyframes radiating {
+    0%,
+    100% {
+      filter: drop-shadow(0px 0px 4px rgba(45, 255, 196, 1));
+    }
+    50% {
+      filter: drop-shadow(0px 0px 4px rgba(45, 255, 196, 0));
+    }
+  }
 }
 
 body {

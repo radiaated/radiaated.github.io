@@ -49,28 +49,30 @@ const PortfolioItem = ({ data }: { data: IPortfolio }) => {
   };
 
   return (
-    <div className="flex relative group gap-4">
-      <div className="absolute w-full h-full group-hover:w-[25%] transition-all duration-200 cursor-pointer hover:cursor-auto">
-        <div className="relative h-full w-full flex justify-center items-center">
+    <div className="flex md:relative group gap-4 overflow-clip border border-stone-700 rounded p-1">
+      <div className="h-full w-[25%] md:absolute md:w-full md:group-hover:w-[25%] md:transition-all md:duration-200 md:cursor-pointer md:hover:cursor-auto">
+        <div className="md:relative h-full w-full flex justify-center items-center">
           <img
             src={data.img}
             alt={data.title}
-            className="absolute w-full h-full object-cover blur-xs group-hover:blur-none transition"
+            className="block md:absolute w-full h-[127px] rounded object-cover blur-none md:blur-xs md:group-hover:blur-none md:transition"
           />
-          <div className="z-50 relative text-2xl group-hover:invisible transition drop-shadow-2xl">
+          <div className="hidden p-16 md:block md:z-50 md:relative md:text-2xl md:visible md:group-hover:invisible md:transition md:drop-shadow-2xl">
             {data.title}
           </div>
         </div>
       </div>
 
-      <div className="w-[25%]"></div>
+      <div className="hidden md:block md:w-[25%]"></div>
 
-      <div className="w-[75%] invisible group-hover:visible delay-100 transition">
+      <div className="w-[75%] visible md:invisible md:group-hover:visible md:delay-100 md:transition">
         <div className="text-lg">{data.title}</div>
-        <div className="font-extralight">{data.description}</div>
+        <div className="font-extralight text-stone-300">{data.description}</div>
         <div className="flex gap-2 mb-2">
           {data.tech_stack.map((tech, index) => (
-            <div key={index}>{techStackMaps[tech].html}</div>
+            <div key={index} className="border-b border-stone-600 rounded-sm">
+              {techStackMaps[tech].html}
+            </div>
           ))}
           <div></div>
         </div>
