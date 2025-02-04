@@ -138,7 +138,7 @@ const NavBar = () => {
           </div>
         ))}
       </div>
-      <div className="w-fit mx-auto animate-bounce mt-16 text-4xl">
+      <div className="w-fit mx-auto animate-bounce mt-16 text-4xl md:hidden">
         <FaAngleDown />
       </div>
     </div>
