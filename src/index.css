@@ -1,3 +1,4 @@
+@import url("/node_modules/@fortawesome/fontawesome-free/css/all.min.css");
 @import "tailwindcss";
 
 @theme {
@@ -5,5 +6,13 @@
 }
 
 body {
-  @apply font-primary;
+  @apply font-primary bg-stone-800 text-stone-100 text-sm;
+}
+
+h2 {
+  @apply text-2xl border-b border-b-stone-600 pb-2;
+}
+
+.btn {
+  @apply w-fit flex justify-center items-center gap-2 px-2 py-1 duration-100;
 }
