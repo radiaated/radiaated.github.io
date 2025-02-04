@@ -7,35 +7,41 @@ export interface IPortfolio {
   tech_stack: ("Python" | "Javascript" | "Django" | "React")[];
 }
 import { Link } from "react-router-dom";
-import DjangoIcon from "../assets/img/django-svgrepo-com.svg";
+import {
+  FaPython,
+  FaJs,
+  FaReact,
+  FaArrowUpRightFromSquare,
+} from "react-icons/fa6";
+import { SiDjango, SiGithub } from "react-icons/si";
 
 const PortfolioItem = ({ data }: { data: IPortfolio }) => {
   const techStackMaps = {
     Python: {
       html: (
         <div className="btn text-xs">
-          <i className="fa-brands fa-python text-[#FFE873] "></i> Python
+          <FaPython className="text-[#FFE873]" /> Python
         </div>
       ),
     },
     Javascript: {
       html: (
         <div className="btn text-xs">
-          <i className="fa-brands fa-js text-[#f0db4f] "></i> Javascript
+          <FaJs className="text-[#f0db4f]" /> Javascript
         </div>
       ),
     },
     React: {
       html: (
         <div className="btn text-xs">
-          <i className="text-[#61DBFB] fa-brands fa-react"></i> React
+          <FaReact className="text-[#61DBFB]" /> React
         </div>
       ),
     },
     Django: {
       html: (
         <div className="btn text-xs">
-          <img src={DjangoIcon} className="h-4" />
+          <SiDjango className="text-[#0db172]" />
           Django
         </div>
       ),
@@ -43,7 +49,7 @@ const PortfolioItem = ({ data }: { data: IPortfolio }) => {
   };
 
   return (
-    <div className="flex relative group gap-4 hover:h-[125%]">
+    <div className="flex relative group gap-4">
       <div className="absolute w-full h-full group-hover:w-[25%] transition-all duration-200 cursor-pointer hover:cursor-auto">
         <div className="relative h-full w-full flex justify-center items-center">
           <img
@@ -75,7 +81,7 @@ const PortfolioItem = ({ data }: { data: IPortfolio }) => {
             className="btn bg-[#0d74e7] hover:bg-[#0d81e7] rounded-sm text-xs font-extralight"
           >
             Github
-            <i className="fa-brands fa-github"></i>
+            <SiGithub />
           </Link>
           {data.demo_link && (
             <Link
@@ -84,7 +90,7 @@ const PortfolioItem = ({ data }: { data: IPortfolio }) => {
               className="btn border border-stone-300 bg-transparent hover:bg-stone-300 hover:text-stone-800 rounded-sm text-xs font-extralight"
             >
               Demo
-              <i className="fa-solid fa-arrow-up-right-from-square text"></i>
+              <FaArrowUpRightFromSquare />
             </Link>
           )}
         </div>
