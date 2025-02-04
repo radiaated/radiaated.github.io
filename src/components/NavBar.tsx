@@ -133,7 +133,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="h-screen w-100 flex flex-col justify-center items-center static top-0 left-0 mx-auto lg:fixed">
+    <div className="h-screen w-full flex flex-col justify-center items-center">
       <div className="text-3xl font-extrabold flex" ref={logo}>
         radi
         <span className="block" ref={refA1}>
