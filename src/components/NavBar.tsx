@@ -1,39 +1,39 @@
 import { Link } from "react-router-dom";
 
-import DjangoIcon from "../assets/img/django-svgrepo-com.svg";
-import { skills } from "../assets/data/portfolios";
+// import DjangoIcon from "../assets/img/django-svgrepo-com.svg";
+// import { skills } from "../assets/data/portfolios";
 const NavBar = () => {
-  const skillsTechMaps = {
-    Python: {
-      html: (
-        <div className="btn text-xs">
-          <i className="fa-brands fa-python text-[#FFE873] "></i> Python
-        </div>
-      ),
-    },
-    Javascript: {
-      html: (
-        <div className="btn text-xs">
-          <i className="fa-brands fa-js text-[#f0db4f] "></i> Javascript
-        </div>
-      ),
-    },
-    React: {
-      html: (
-        <div className="btn text-xs">
-          <i className="text-[#61DBFB] fa-brands fa-react"></i> React
-        </div>
-      ),
-    },
-    Django: {
-      html: (
-        <div className="btn text-xs">
-          <img src={DjangoIcon} className="h-4" />
-          Django
-        </div>
-      ),
-    },
-  };
+  //   const skillsTechMaps = {
+  //     Python: {
+  //       html: (
+  //         <div className="btn text-xs">
+  //           <i className="fa-brands fa-python text-[#FFE873] "></i> Python
+  //         </div>
+  //       ),
+  //     },
+  //     Javascript: {
+  //       html: (
+  //         <div className="btn text-xs">
+  //           <i className="fa-brands fa-js text-[#f0db4f] "></i> Javascript
+  //         </div>
+  //       ),
+  //     },
+  //     React: {
+  //       html: (
+  //         <div className="btn text-xs">
+  //           <i className="text-[#61DBFB] fa-brands fa-react"></i> React
+  //         </div>
+  //       ),
+  //     },
+  //     Django: {
+  //       html: (
+  //         <div className="btn text-xs">
+  //           <img src={DjangoIcon} className="h-4" />
+  //           Django
+  //         </div>
+  //       ),
+  //     },
+  //   };
 
   return (
     <div className="h-screen w-100 flex flex-col justify-center items-center static top-0 left-0 mx-auto lg:fixed">

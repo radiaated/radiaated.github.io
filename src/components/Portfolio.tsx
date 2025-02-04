@@ -1,4 +1,4 @@
-import PortfolioItem, { IPortfolio } from "./PortfolioItem";
+import PortfolioItem from "./PortfolioItem";
 import { portfolios } from "../assets/data/portfolios";
 const Portfolio = () => {
   return (
